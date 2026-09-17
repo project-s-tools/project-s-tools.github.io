@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Project S: DE logo</title>
+  <desc id="desc">Project S logo for Survey Data Entry</desc>
+  <rect x="34" y="34" width="444" height="444" rx="74" fill="#0b1020" stroke="#16c7e8" stroke-width="24"/>
+  <text x="256" y="252" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="190" font-weight="700">S:</text>
+  <text x="256" y="385" text-anchor="middle" fill="#16c7e8" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="700" letter-spacing="3">DE</text>
+</svg>
