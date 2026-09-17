@@ -27,8 +27,9 @@ body { margin:0; font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",R
 .tool-number { color:#9aa2b3; font-size:13px; font-weight:600; padding-top:4px; }
 .status { color:var(--accent); font-size:11px; font-weight:700; letter-spacing:.13em; margin-bottom:18px; }
 .devs-heading { display:flex; align-items:center; gap:18px; }
-.devs-logo-box { width:72px; height:72px; flex:0 0 72px; background:transparent; display:flex; align-items:center; justify-content:center; }
-.devs-logo-box img { width:100%; height:100%; display:block; object-fit:contain; }
+.devs-logo-box { width:72px; height:72px; flex:0 0 72px; background:transparent; display:flex; align-items:center; justify-content:center; position:relative; }
+.devs-logo-box::before { content:""; position:absolute; inset:5px; background:#0b1020; border-radius:8px; z-index:0; }
+.devs-logo-box img { width:100%; height:100%; display:block; object-fit:contain; position:relative; z-index:1; }
 .devs-name { display:flex; flex-direction:column; justify-content:center; min-width:0; }
 .tool-content h3 { margin:0 0 5px; font-size:46px; line-height:.95; letter-spacing:-.04em; }
 .subtitle { margin:0; font-size:18px; font-weight:500; line-height:1.3; }
@@ -52,6 +53,7 @@ footer { background:var(--bg); color:white; padding:42px 0; }
  .hero h1 { font-size:clamp(52px,16vw,78px); }
  .tool-card { grid-template-columns:1fr; gap:18px; }
  .devs-logo-box { width:60px; height:60px; flex-basis:60px; }
+ .devs-logo-box::before { inset:4px; border-radius:7px; }
  .devs-heading { gap:14px; }
  .tool-content h3 { font-size:38px; }
  .subtitle { font-size:15px; }
