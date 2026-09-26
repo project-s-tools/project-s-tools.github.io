@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skąd się to wzięło? — Project S:</title>
+<meta name="description" content="Historia powstania Project S: DE, DEVS i modułu Audit 2.0.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter:ital@1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c1220;
+    --surface:#131b2e;
+    --border:#26314a;
+    --text:#e7ecf5;
+    --muted:#8d97ad;
+    --accent:#5b8cf2;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    line-height:1.7;
+  }
+  a{color:var(--accent);}
+  .topbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 28px;border-bottom:1px solid var(--border);
+  }
+  .brand{
+    font-weight:700;font-size:1.05rem;letter-spacing:0.01em;color:var(--text);
+    text-decoration:none;
+  }
+  .brand span{color:var(--accent);}
+  .back-link{
+    font-size:0.9rem;color:var(--muted);text-decoration:none;
+  }
+  .back-link:hover{color:var(--text);}
+  main{
+    max-width:680px;margin:0 auto;padding:56px 24px 96px;
+  }
+  h1{
+    font-size:2rem;font-weight:700;margin:0 0 8px;letter-spacing:-0.01em;
+  }
+  .byline{
+    color:var(--muted);font-size:0.92rem;margin:0 0 44px;
+  }
+  .intro{
+    font-style:italic;color:var(--muted);font-size:1.02rem;
+    border-left:2px solid var(--border);padding-left:18px;margin:0 0 34px;
+  }
+  p{
+    font-size:1.02rem;margin:0 0 22px;color:var(--text);
+  }
+  h2{
+    font-size:1.35rem;font-weight:700;margin:44px 0 18px;letter-spacing:-0.005em;
+  }
+  strong{color:var(--text);}
+  .signature{
+    margin-top:48px;padding-top:24px;border-top:1px solid var(--border);
+    color:var(--muted);font-style:italic;
+  }
+  .license-callout{
+    margin-top:40px;padding:22px 24px;background:var(--surface);
+    border:1px solid var(--border);border-radius:8px;
+  }
+  .license-callout p{margin:0;}
+  .license-callout a{font-weight:600;}
+  footer{
+    max-width:680px;margin:0 auto;padding:0 24px 48px;
+    color:var(--muted);font-size:0.82rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="brand" href="index.html">Project S<span>:</span></a>
+  <a class="back-link" href="index.html">← Strona główna</a>
+</div>
+
+<main>
+  <h1>Skąd się to wzięło?</h1>
+
+  <p class="intro">Wakacje 2026. Fala upałów, jakiej Warszawa nie pamięta od lat. W dzień nie da się pracować w ogóle, wieczory poświęca się więc na rozrywkę, czyli zadania, o których nie wiadomo, czy kiedykolwiek przyniosą komuś jakikolwiek pożytek. Szczególnie w badaniach, w których od dłuższego już czasu jakość danych zdaje się mieć coraz mniejsze znaczenie.</p>
+
+  <p>Bezpośrednim impulsem powstania programu był widok, którego żaden metodolog nie powinien oglądać bez uprzedniego przygotowania psychicznego: studenci wprowadzający dane ankietowe wprost do komórek popularnego programu biurowego bądź też nieznacznie od nich sprytniejsi — choć wciąż niewystarczająco — przepisujący je ręcznie do internetowego formularza. Rozwiązanie to, wprawdzie odrobinę lepsze, pozostaje tym samym generatorem błędu, tyle że w nowym opakowaniu, do którego dołączono bonus w postaci znacząco wydłużonego czasu pracy. Czasu, który znacznie rozsądniej można byłoby przeznaczyć na właściwą walidację danych zamiast na ich bezrefleksyjne przepisywanie.</p>
+
+  <p>Ktoś mógłby w tym miejscu słusznie zauważyć, że programy do wprowadzania danych istnieją od dawna i mają swoją własną, niekiedy szacowną historię. To prawda — z zastrzeżeniem, że dzielą się one na ogół na dwie kategorie, obie równie mało pomocne w praktyce. Pierwsza to narzędzia pozbawione funkcji walidacyjnych w ogóle albo wyposażone w nie w wersji podstawowej tak skromnie, że różnica między ich obecnością a brakiem bywa czysto teoretyczna. Druga to rozwiązania rzeczywiście potężne, lecz na tyle złożone, że opanowanie ich własnego języka i struktury pochłania więcej czasu, niż można później zaoszczędzić dzięki ich użyciu. W prostych projektach czyni je to narzędziami porównywalnymi z młotem pneumatycznym używanym do wbijania pinezki: technicznie skutecznymi, praktycznie niewspółmiernymi do zadania. Studenci radzą sobie więc dość racjonalnie, szczególnie że darmowych narzędzi do wprowadzania danych wcale nie ma na rynku aż tak wiele. Narzędzie DE jest odpowiedzią na tę lukę — to darmowy (dla studentów), prosty program do wczytywania danych z papierowych formularzy.</p>
+
+  <p>Niemal równocześnie, po drugiej stronie łącza, przyjaciółka z GESIS, Petra B., kontrolująca właśnie dane z polskiej edycji badania ISSP Digital Societies, zgłosiła obserwację godną samego Holmesa: dwa rekordy wyglądają na niemal identyczne, a jednak stopień ich podobieństwa nieznacznie nie sięga progu, przy którym opracowany przez Department of Survey Data Curation (GESIS SDC) skrypt do diagnostyki duplikatów uznałby je za takie. Narzędzie GESIS wykrywa duplikaty powyżej progu 80%, z wyłączeniem zmiennych metryczkowych, zgodnie zresztą z dyrektywami programu ISSP uchwalonymi przez Walne Zgromadzenie. I znakomicie spełnia swoje zadanie.</p>
+
+  <p>Głębsza refleksja nad problemem nieuchronnie prowadzi jednak do wniosku, że na zjawisko duplikatów w bazach danych można patrzeć na co najmniej dwa sposoby. Pierwszy ma charakter graniczny: wyznacza się — w istocie arbitralnie — próg, powyżej którego dwa dostatecznie podobne do siebie rekordy zostają uznane za duplikaty. Drugie spojrzenie, moim zdaniem bardziej realistyczne i ważniejsze z perspektywy jakości danych zakłada, że stopień podobieństwa rekordów jest zarazem miarą redundancji informacji, którą owe rekordy — a szerzej: dane — ze sobą niosą. Im bardziej dwa rekordy są do siebie podobne, tym mniej nowej informacji wnosi drugi z nich w stosunku do pierwszego. Jeśli tak, stopień owego podobieństwa warto wyrażać raczej na skali ciągłej, zamiast ograniczać się do punktowego wskazania wartości, powyżej lub poniżej której podobieństwo jest bądź przestaje być akceptowane.</p>
+
+  <p>Głębsza refleksja nad obserwacją Petry okazała się kosztowniejsza, niż ktokolwiek mógł przypuszczać — reszta wieczoru upłynęła nie na odpoczynku, lecz na rozmyślaniu, w jaki sposób można byłoby rozwiązać problem tak, aby oprócz wyznaczania granicznej wartości akceptacji danych, zgodnie choćby z wymaganiami techniczno-metodologicznymi programu ISSP, narzędzie umożliwiało możliwie szeroki i elastyczny ogląd całego zbioru oraz jego dowolnych fragmentów, między innymi pod względem podobieństwa rekordów.</p>
+
+  <p>Elastyczność ta dawałaby co najmniej dwie możliwości metodologicznej oceny danych. Po pierwsze, pozwalałaby identyfikować te fragmenty kwestionariusza, które są najsłabsze pod względem niesionej wartości informacyjnej. Po drugie, umożliwiałaby wykrywanie duplikatów będących raczej skutkiem problemów technicznych niż bezpośrednim rezultatem obserwacji z fazy terenowej badania.</p>
+
+  <p>Z tej właśnie drobnej refleksji zrodził się zamysł znacznie ambitniejszy niż samo tropienie duplikatów. Skoro można diagnozować podejrzane pary rekordów, można również zacząć badać same wzorce odpowiedzi — zwłaszcza w bateriach pytań mierzonych na identycznych skalach. Po drodze do zestawu dołączono kolejne parametry diagnostyczne, które — ku szczeremu zaskoczeniu autora — przydały się nie tylko do wyłapywania anomalii, lecz również do zwyczajnej analizy danych. Jest to chyba najbardziej pouczający paradoks całej tej historii.</p>
+
+  <p>Zamysł ten urósł ostatecznie do rangi osobnego podprojektu: <strong>Audit 2.0</strong> — modułu zdolnego analizować również dane pochodzące skądinąd, niekoniecznie wprowadzone bezpośrednio przy użyciu programu, choć to nadal pozostaje jego głównym powołaniem. Tak oto z <strong>DE</strong> narodził się <strong>DEVS</strong>: to samo narzędzie, tyle że wzbogacone o funkcje diagnostyczno-kontrolne służące ocenie jakości danych — również tej mniej oczywistej, związanej z ich wartością informacyjną. Wątek ten będzie kontynuowany w kolejnych narzędziach, w szczególności w planowanym <strong>Project S: QA</strong>. Tak narodził się też Project S, pod którego parasolem wytworzone zostały oba narzędzia, a planowanych jest co najmniej kilka następnych, wszystkie skupione wokół zagadnień związanych z kolejnymi wymiarami jakości danych sondażowych.</p>
+
+  <h2>Duch przodka</h2>
+
+  <p>Nie był to zresztą pierwszy raz, gdy podobna myśl nawiedziła autora. W roku 2002, wspólnie z dr. Tomaszem J., powstał <strong>Validator 1.0</strong> — program wykorzystany w Polskim Generalnym Sondażu Społecznym 2002, którego głównym zadaniem było przeprowadzanie zaawansowanej kontroli logicznej zbioru danych oraz walidacji samego kwestionariusza.</p>
+
+  <p>Próby uczynienia z niego narzędzia bardziej uniwersalnego zakończyły się jednak fiaskiem godnym osobnej książki. Przy adaptacji do edycji PGSS z 2005 roku okazało się, że oparcie programu na sztywnym, statycznym kodzie było błędem strategicznym — każda kolejna zmiana pochłaniała więcej wysiłku, niż program był w stanie później oddać w postaci oszczędności pracy, podczas gdy te same cele można było osiągnąć szybciej i skuteczniej zupełnie inną drogą. Program odszedł zatem w spokojne zapomnienie, nie doczekawszy się następcy w postaci kolejnej edycji Validatora.</p>
+
+  <p>Sam pomysł — połączenie automatycznej walidacji z samym aktem wprowadzania danych — był jednak trafny i w 2002 roku sprawdził się znakomicie. Dowodzi to, że dobre idee potrafią przetrwać nawet porażkę narzędzia, które je ucieleśniało.</p>
+
+  <p><strong>DEVS wraz z modułem Audit 2.0 jest zatem, w pewnym sensie, wnukiem Validatora</strong>: tą samą ideą, tym razem jednak zbudowaną na zupełnie odmiennej filozofii niż dwie dekady wcześniej i wzbogaconą o co najmniej kilkadziesiąt innych funkcji, o których, tworząc Validatora ponad dwadzieścia lat temu, autorzy nawet nie pomyśleli.</p>
+
+  <h2>A co z owymi dwoma rekordami?</h2>
+
+  <p>Tu historia serwuje czytelnikowi swój najbardziej przewrotny zwrot akcji: przypadki zgłoszone przez Petrę zostały ostatecznie usunięte ze zbioru ISSP Digital Societies — lecz wcale nie z powodu domniemanej duplikacji. Dalsza analiza ujawniła zupełnie inne usterki jakościowe.</p>
+
+  <p>Niepokojące, choć niewystarczające podobieństwo okazało się sygnałem alarmowym — fałszywym tropem, który mimo wszystko doprowadził do właściwego sprawcy. Mechanizm zadziałał więc bez zarzutu, tyle że nie w sposób, którego ktokolwiek się spodziewał, co, jak się zdaje, stanowi najlepszy możliwy początek biografii narzędzia stworzonego do wykrywania anomalii. Dane z badania, w tym również części polskiej, pobrać można ze strony <a href="https://doi.org/10.4232/5.ZA10020.1.0.0">https://doi.org/10.4232/5.ZA10020.1.0.0</a> (ISSP Research Group (2026). International Social Survey Programme: Digital Societies I – ISSP 2024 (ZA10020; Version 1.0.0) [Data set]. GESIS, Cologne), oczywiście pozbawione dwóch, wadliwych rekordów, które mnie zainspirowały.</p>
+
+  <div class="license-callout">
+    <p><strong>Aby oszczędzić wykładowcom (a przede wszystkim samym danym) niepotrzebnych cierpień, każdy student, który potrzebuje narzędzia do wczytywania danych, może otrzymać licencję na darmowe wykorzystanie programu.</strong> W tym celu wystarczy wypełnić <a href="license.html">formularz</a>, podając swoje imię i nazwisko, nazwę uczelni oraz wydziału, a także adres e-mail w domenie uczelni, i wskazać cel, do którego program będzie używany — oraz czasem poczekać kilka dni.</p>
+  </div>
+
+  <p class="signature">Marcin W. Zieliński<br>Lato 2026</p>
+</main>
+
+<footer>
+  Project S: · Kontakt: <a href="mailto:ProjectSX@wp.pl">ProjectSX@wp.pl</a>
+</footer>
+
+</body>
+</html>
