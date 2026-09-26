@@ -139,20 +139,17 @@
   <p class="lede">Fill in the form below to request a license for Project S: DE and/or DEVS. We usually reply within a few business days.</p>
 
   <!--
-    SETUP REQUIRED BEFORE PUBLISHING:
-    1) Create a free account at https://formspree.io using the ProjectSX@wp.pl address.
-    2) Create a new form — Formspree will generate an endpoint such as
-       https://formspree.io/f/XXXXXXXX
-    3) Replace "https://formspree.io/f/YOUR_FORM_ID" below with that endpoint
-       (the same one used on the Polish license.html form is fine — both
-       forms can point to the same Formspree endpoint).
-    4) Submissions will be emailed to ProjectSX@wp.pl automatically —
-       nothing else needs to be configured.
+    SETUP: this form submits via Web3Forms (no signup required,
+    250 free submissions per month). The access key below is public by
+    design (that's how Web3Forms works) — it is not a secret.
   -->
-  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+  <form action="https://api.web3forms.com/submit" method="POST">
 
-    <input type="hidden" name="_next" value="https://project-s-tools.github.io/license-sent-en.html">
-    <input type="hidden" name="_subject" value="New license request — Project S">
+    <input type="hidden" name="access_key" value="31163460-dce1-4b74-ad34-87c5b3374f9e">
+    <input type="hidden" name="subject" value="New license request — Project S">
+    <input type="hidden" name="from_name" value="Project S license form">
+    <input type="hidden" name="redirect" value="https://project-s-tools.github.io/license-sent-en.html">
+    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
     <div class="field">
       <label for="name">Full name <span class="required-star">*</span></label>

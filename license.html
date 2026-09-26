@@ -139,18 +139,17 @@
   <p class="lede">Wypełnij poniższy formularz, aby poprosić o licencję na Project S: DE i/lub DEVS. Odpowiadamy zwykle w ciągu kilku dni roboczych.</p>
 
   <!--
-    KONFIGURACJA WYMAGANA PRZED PUBLIKACJĄ:
-    1) Załóż darmowe konto na https://formspree.io przy użyciu adresu ProjectSX@wp.pl.
-    2) Utwórz nowy formularz (New Form) — Formspree wygeneruje adres w postaci
-       https://formspree.io/f/XXXXXXXX
-    3) Podmień poniżej "https://formspree.io/f/YOUR_FORM_ID" na ten adres.
-    4) Zgłoszenia będą przychodzić e-mailem na ProjectSX@wp.pl automatycznie —
-       nic więcej nie trzeba konfigurować.
+    KONFIGURACJA: formularz wysyła dane przez Web3Forms (bez rejestracji,
+    250 darmowych zgłoszeń miesięcznie). Klucz dostępu poniżej jest publiczny
+    z założenia (Web3Forms tak działa) — nie jest to sekret.
   -->
-  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+  <form action="https://api.web3forms.com/submit" method="POST">
 
-    <input type="hidden" name="_next" value="https://project-s-tools.github.io/license-sent.html">
-    <input type="hidden" name="_subject" value="Nowe zgłoszenie licencyjne — Project S">
+    <input type="hidden" name="access_key" value="31163460-dce1-4b74-ad34-87c5b3374f9e">
+    <input type="hidden" name="subject" value="Nowe zgłoszenie licencyjne — Project S">
+    <input type="hidden" name="from_name" value="Formularz licencyjny Project S">
+    <input type="hidden" name="redirect" value="https://project-s-tools.github.io/license-sent.html">
+    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
     <div class="field">
       <label for="name">Imię i nazwisko <span class="required-star">*</span></label>
