@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where it all came from — Project S:</title>
+<meta name="description" content="The origin story of Project S: DE, DEVS and the Audit 2.0 module.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter:ital@1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c1220;
+    --surface:#131b2e;
+    --border:#26314a;
+    --text:#e7ecf5;
+    --muted:#8d97ad;
+    --accent:#5b8cf2;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    line-height:1.7;
+  }
+  a{color:var(--accent);}
+  .topbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 28px;border-bottom:1px solid var(--border);
+  }
+  .brand{
+    font-weight:700;font-size:1.05rem;letter-spacing:0.01em;color:var(--text);
+    text-decoration:none;
+  }
+  .brand span{color:var(--accent);}
+  .back-link{
+    font-size:0.9rem;color:var(--muted);text-decoration:none;
+  }
+  .back-link:hover{color:var(--text);}
+  main{
+    max-width:680px;margin:0 auto;padding:56px 24px 96px;
+  }
+  h1{
+    font-size:2rem;font-weight:700;margin:0 0 8px;letter-spacing:-0.01em;
+  }
+  .byline{
+    color:var(--muted);font-size:0.92rem;margin:0 0 44px;
+  }
+  .intro{
+    font-style:italic;color:var(--muted);font-size:1.02rem;
+    border-left:2px solid var(--border);padding-left:18px;margin:0 0 34px;
+  }
+  p{
+    font-size:1.02rem;margin:0 0 22px;color:var(--text);
+  }
+  h2{
+    font-size:1.35rem;font-weight:700;margin:44px 0 18px;letter-spacing:-0.005em;
+  }
+  strong{color:var(--text);}
+  .signature{
+    margin-top:48px;padding-top:24px;border-top:1px solid var(--border);
+    color:var(--muted);font-style:italic;
+  }
+  .license-callout{
+    margin-top:40px;padding:22px 24px;background:var(--surface);
+    border:1px solid var(--border);border-radius:8px;
+  }
+  .license-callout p{margin:0;}
+  .license-callout a{font-weight:600;}
+  footer{
+    max-width:680px;margin:0 auto;padding:0 24px 48px;
+    color:var(--muted);font-size:0.82rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="brand" href="index.html">Project S<span>:</span></a>
+  <a class="back-link" href="index.html">← Home</a>
+</div>
+
+<main>
+  <h1>Where it all came from</h1>
+
+  <p class="intro">Summer 2026. A heatwave the likes of which Warsaw hadn't seen in years. During the day, work is simply impossible; the evenings are spent on entertainment instead — that is, on tasks nobody can say for certain will ever benefit anyone. Especially in research, where data quality has for some time now seemed to matter less and less.</p>
+
+  <p>The direct impulse behind the program was a sight no methodologist should have to witness without prior psychological preparation: students entering survey data straight into the cells of a popular office program, or their marginally cleverer — though still not clever enough — counterparts, copying it out by hand into a web form instead. That solution, admittedly a touch better, remains the very same error generator, just in new packaging, with the added bonus of a significantly longer working time. Time that could far more sensibly have been spent on proper data validation instead of mindless re-typing.</p>
+
+  <p>Someone might rightly point out here that data-entry programs have existed for a long time and have their own, at times venerable, history. True enough — with the caveat that they generally fall into two categories, both equally unhelpful in practice. The first consists of tools with no validation functions at all, or equipped with them so sparingly in their basic version that the difference between having them and not having them is largely theoretical. The second consists of genuinely powerful solutions, but ones so complex that mastering their own language and structure takes more time than their use could ever save. In simple projects, this makes them comparable to a pneumatic hammer used to drive in a thumbtack: technically effective, practically disproportionate to the task. Students therefore cope fairly rationally — especially since free data-entry tools aren't exactly abundant on the market. DE is an answer to that gap: a free (for students), simple program for entering data from paper questionnaires.</p>
+
+  <p>At almost the same time, on the other end of the line, a friend at GESIS, Petra B., who was reviewing data from the Polish edition of the ISSP Digital Societies study, reported an observation worthy of Holmes himself: two records looked almost identical, yet their degree of similarity narrowly failed to reach the threshold at which the duplicate-detection script developed by the Department of Survey Data Curation (GESIS SDC) would have flagged them as such. The GESIS tool detects duplicates above an 80% threshold, excluding demographic variables, in line with the technical-methodological requirements adopted by the ISSP General Assembly. And it does its job excellently.</p>
+
+  <p>A deeper reflection on the problem inevitably leads to the conclusion that duplicates in datasets can be viewed in at least two ways. The first is threshold-based: a — in essence, arbitrary — cutoff is set, above which two sufficiently similar records are declared duplicates. The second view, in my opinion more realistic and more important from the standpoint of data quality, holds that the degree of similarity between records is at the same time a measure of the informational redundancy those records — and data more broadly — carry with them. The more similar two records are, the less new information the second one contributes relative to the first. If that's the case, the degree of similarity is better expressed on a continuous scale, rather than reduced to a single cutoff above or below which similarity is or isn't accepted.</p>
+
+  <p>Turning this thought toward Petra's observation proved more costly than anyone could have guessed — the rest of the evening went not to rest, but to pondering how one might solve the problem in a way that, beyond simply setting an acceptance threshold in line with ISSP's technical-methodological requirements, would let the tool examine the entire dataset, and any part of it, as broadly and flexibly as possible — including in terms of record similarity.</p>
+
+  <p>That flexibility would open up at least two ways of assessing data methodologically. First, it would make it possible to identify the parts of a questionnaire that carry the weakest informational value. Second, it would make it possible to detect duplicates arising from technical problems rather than as a direct result of observations made in the field.</p>
+
+  <p>From this small reflection grew an ambition far greater than merely tracking down duplicates. If suspicious pairs of records can be diagnosed, the response patterns themselves can also be studied — especially within batteries of questions measured on identical scales. Along the way, further diagnostic parameters were added to the set, which — to the author's genuine surprise — turned out useful not only for catching anomalies but also for ordinary data analysis. This is perhaps the most instructive paradox in this whole story.</p>
+
+  <p>The idea eventually grew into a project of its own: <strong>Audit 2.0</strong> — a module capable of analysing data from other sources too, not necessarily entered directly through the program, though that remains its primary calling. And so, out of <strong>DE</strong>, <strong>DEVS</strong> was born: the same tool, only enriched with diagnostic and control functions for assessing data quality — including the less obvious kind, tied to informational value. This thread will be continued in future tools, in particular the planned <strong>Project S: QA</strong>. And that is also how Project S itself was born — the umbrella under which both tools were created, with at least a few more planned, all built around successive dimensions of survey data quality.</p>
+
+  <h2>The ghost of an ancestor</h2>
+
+  <p>This was, incidentally, not the first time such a thought had visited the author. Back in 2002, together with Dr. Tomasz J., <strong>Validator 1.0</strong> was created — a program used in the Polish General Social Survey 2002, whose main task was to carry out advanced logical checks on the dataset and validate the questionnaire itself.</p>
+
+  <p>Attempts to turn it into a more universal tool, however, ended in a failure worthy of a book of its own. When adapting it for the 2005 edition of PGSS, it became clear that basing the program on rigid, static code had been a strategic mistake — every subsequent change consumed more effort than the program could ever pay back in saved work, while the same goals could have been achieved faster and more effectively by an entirely different route. The program was thus laid quietly to rest, never to see a successor in the form of another Validator edition.</p>
+
+  <p>The idea itself — combining automatic validation with the very act of data entry — was nonetheless a sound one, and it worked splendidly in 2002. Which proves that good ideas can outlive the failure of the tool that first embodied them.</p>
+
+  <p><strong>DEVS, together with the Audit 2.0 module, is therefore, in a sense, Validator's grandchild</strong>: the same idea, this time built on a completely different philosophy than two decades earlier, and enriched with at least several dozen other features that the authors, building Validator more than twenty years ago, never even thought of.</p>
+
+  <h2>And what about those two records?</h2>
+
+  <p>Here the story serves the reader its most perverse twist: the cases Petra reported were ultimately removed from the ISSP Digital Societies dataset — but not because of the suspected duplication at all. Further analysis revealed entirely different quality issues.</p>
+
+  <p>The troubling, if insufficient, similarity turned out to be an alarm signal — a false lead that nonetheless led straight to the real culprit. The mechanism thus performed flawlessly, just not in the way anyone had expected, which, it seems, makes for the best possible origin story for a tool built to detect anomalies. The study data, including the Polish part, can be downloaded from <a href="https://doi.org/10.4232/5.ZA10020.1.0.0">https://doi.org/10.4232/5.ZA10020.1.0.0</a> (ISSP Research Group (2026). International Social Survey Programme: Digital Societies I – ISSP 2024 (ZA10020; Version 1.0.0) [Data set]. GESIS, Cologne) — naturally, without the two flawed records that started all this.</p>
+
+  <div class="license-callout">
+    <p><strong>To spare lecturers (and above all the data itself) unnecessary suffering, any student who needs a data-entry tool can be granted a license to use the program free of charge.</strong> Simply fill in the <a href="license-en.html">form</a>, giving your full name, university, faculty or institute, a university email address, and the purpose for which the program will be used — and wait a few days.</p>
+  </div>
+
+  <p class="signature">Marcin W. Zieliński<br>Summer 2026</p>
+</main>
+
+<footer>
+  Project S: · Contact: <a href="mailto:ProjectSX@wp.pl">ProjectSX@wp.pl</a>
+</footer>
+
+</body>
+</html>
